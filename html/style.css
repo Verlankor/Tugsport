@@ -1,0 +1,60 @@
+body {
+    transition: opacity 0.5s;
+    pointer-events: none;
+    opacity: 0.0;
+}
+
+.container {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    border: solid 2px white;
+    background-color: rgba(0, 0, 138, 0.5);
+    overflow: hidden;
+    user-select: none;
+}
+
+.module {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px white;
+    pointer-events: all;
+}
+
+.module img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.check,
+.x {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#health {
+    position: relative;
+    width: 500px;
+    height: 25px;
+    top: calc(80% - 25px);
+    left: calc(50% - 250px);
+    background-color: rgba(0, 0, 138, 0.5);
+    border: 2px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#healthbar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(204, 56, 45);
+    transition: width 0.5s;
+}
