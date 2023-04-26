@@ -9,6 +9,16 @@ local deliverPeds = {}
 local jobBlip
 
 CreateThread(function()
+    local startBlip = AddBlipForCoord(Config.StartingPoint)
+    SetBlipScale(startBlip, 0.8)
+    SetBlipAsShortRange(startBlip, true)
+    SetBlipSprite(startBlip, 356)
+    SetBlipColour(startBlip, 2)
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString('Tugsportation')
+    EndTextCommandSetBlipName(startBlip)
+
+
     RequestModel('s_m_m_dockwork_01')
     while not HasModelLoaded('s_m_m_dockwork_01') do
         Wait(0)
